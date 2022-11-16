@@ -1,0 +1,17 @@
+# /lib/systemd/system/pocketbase.service
+
+
+[Service]
+Type           = simple
+User           = ubuntu
+Group          = ubuntu
+LimitNOFILE    = 4096
+Restart        = always
+RestartSec     = 5s
+StandardOutput   = append:/home/ubuntu/pb/errors.log
+StandardError    = append:/home/ubuntu/pb/errors.log
+WorkingDirectory = /home/ubuntu/pb/
+ExecStart      = /home/ubuntu/pb/pocketbase serve
+[Install]
+WantedBy = multi-user.target
+

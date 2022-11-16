@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+sudo -i -u postgres
+sudo -u postgres createuser --superuser allemps --replication --inherit -P
+sudo -u allemps createdb allemps
+sudo adduser allemps
+
+sudo -i -u allemps
+
+echo "
+CREATE TABLE test(
+  ID INT PRIMARY KEY     NOT NULL,
+   NAME           TEXT    NOT NULL,
+   AGE            INT     NOT NULL
+);
+"| psql
+
+
+
+

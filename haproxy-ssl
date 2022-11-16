@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+#!/usr/bin/env bash
+
+# sudo certbot certonly --standalone -d emps.tigawanna.tech --non-interactive --agree-tos --email denniskinuthiaw@gmail.com --http-01-port=8888
+# sudo certbot certonly --standalone -d mech.tigawanna.tech --non-interactive --agree-tos --email denniskinuthiaw@gmail.com --http-01-port=8888
+
+sudo touch /etc/letsencrypt/live/all-certscerts/mech-certs
+sudo touch /etc/letsencrypt/live/all-certscerts/emps-certs
+sudo touch /etc/letsencrypt/live/all-certscerts/main-certs
+sudo cat /etc/letsencrypt/live/mech.tigawanna.tech/fullchain.pem /etc/letsencrypt/live/mech.tigawanna.tech/privkey.pem > /etc/letsencrypt/live/all-certscerts/mech-certs
+sudo cat /etc/letsencrypt/live/emps.tigawanna.tech/fullchain.pem /etc/letsencrypt/live/emps.tigawanna.tech/privkey.pem >> /etc/letsencrypt/live/all-certscerts/emps-certs
+sudo cat /etc/letsencrypt/live/tigawanna.tech/fullchain.pem /etc/letsencrypt/live/tigawanna.tech/privkey.pem >> /etc/letsencrypt/live/all-certscerts/main-certs
+haproxy -f /etc/haproxy/haproxy.cfg -c
+sudo service haproxy reload
+
