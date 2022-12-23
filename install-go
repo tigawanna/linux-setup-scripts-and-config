@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
+VER=1.19.3
 
-sudo wget -c https://golang.org/dl/go1.19.3.linux-amd64.tar.gz
+sudo wget -c https://golang.org/dl/go$VER.linux-amd64.tar.gz
 sudo rm -rf /usr/local/go
-sudo tar -C /usr/local  -xvzf go1.19.3.linux-amd64.tar.gz
+sudo tar -C /usr/local  -xvzf go$VER.linux-amd64.tar.gz
+sudo rm -rf go$VER.linux-amd64.tar.gz
