@@ -3,8 +3,8 @@
     "$schema": "https://aka.ms/terminal-profiles-schema",
     "actions": [
         {
-            "command": "find",
-            "keys": "ctrl+shift+f"
+            "command": "paste",
+            "keys": "ctrl+v"
         },
         {
             "command": {
@@ -14,8 +14,8 @@
             "keys": "ctrl+c"
         },
         {
-            "command": "paste",
-            "keys": "ctrl+v"
+            "command": "find",
+            "keys": "ctrl+shift+f"
         },
         {
             "command": {
@@ -45,12 +45,6 @@
                 "name": "Command Prompt"
             },
             {
-                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
-                "hidden": false,
-                "name": "Azure Cloud Shell",
-                "source": "Windows.Terminal.Azure"
-            },
-            {
                 "commandline": "%PROGRAMFILES%/Git/usr/bin/bash.exe -i -l",
                 "guid": "{00000000-0000-0000-ba54-000000000002}",
                 "icon": "%PROGRAMFILES%/Git/mingw64/share/git/git-for-windows.ico",
@@ -65,57 +59,18 @@
             },
             {
                 "closeOnExit": "never",
-                "commandline": "wsl ~",
+                "commandline": "ubuntu2004.exe",
                 "cursorColor": "#FFFFFF",
                 "cursorShape": "bar",
                 "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
                 "hidden": false,
                 "historySize": 9001,
-                "icon": "ms-appx:///ProfileIcons/{9acb9455-ca41-5af7-950f-6bca1bc9722f}.png",
+                "icon": "https://assets.ubuntu.com/v1/49a1a858-favicon-32x32.png",
                 "name": "WSL BASH",
                 "padding": "0, 0, 0, 0",
                 "snapOnInput": true,
+                "source": "CanonicalGroupLimited.Ubuntu_79rhkp1fndgsc",
                 "useAcrylic": true
-            },
-            {
-                "closeOnExit": "never",
-                "commandline": "C:\\WINDOWS\\system32\\wsl.exe fish -d Ubuntu-20.04",
-                "cursorColor": "#FFFFFF",
-                "cursorShape": "bar",
-                "guid": "{78e390db-1bff-4533-9d7c-20f53d8bafa1}",
-                "historySize": 9001,
-                "icon": "ms-appx:///ProfileIcons/{9acb9455-ca41-5af7-950f-6bca1bc9722f}.png",
-                "name": "WSL FISH",
-                "padding": "0, 0, 0, 0",
-                "snapOnInput": true,
-                "startingDirectory": "/home/dennis/",
-                "useAcrylic": true
-            },
-            {
-                "commandline": "%PROGRAMFILES%/Git/usr/bin/bash.exe -i -l",
-                "guid": "{e00df568-3317-4a21-ac83-2c64c9cafd14}",
-                "hidden": false,
-                "icon": "%PROGRAMFILES%/Git/mingw64/share/git/git-for-windows.ico",
-                "name": "Bash code",
-                "startingDirectory": "C:\\Users\\denni\\Desktop\\code"
-            },
-            {
-                "commandline": "%PROGRAMFILES%/Git/usr/bin/bash.exe -i -l",
-                "guid": "{935dfd19-8db4-409d-a81c-af93ce3dcdef}",
-                "hidden": false,
-                "icon": "%PROGRAMFILES%/Git/mingw64/share/git/git-for-windows.ico",
-                "name": "Bash gitdeck",
-                "startingDirectory": "C:\\Users\\denni\\Desktop\\code\\gitdeck",
-                "tabTitle": "gitdeck (bash)"
-            },
-            {
-                "commandline": "%PROGRAMFILES%/Git/usr/bin/bash.exe -i -l",
-                "guid": "{9a39187c-747d-429a-aabd-b5734a742a6f}",
-                "hidden": false,
-                "icon": "%PROGRAMFILES%/Git/mingw64/share/git/git-for-windows.ico",
-                "name": "Bash gitpals",
-                "startingDirectory": "C:\\Users\\denni\\Desktop\\code\\gitpals",
-                "tabTitle": "gitpals (bash)"
             },
             {
                 "altGrAliasing": true,
@@ -149,214 +104,27 @@
                 "tabTitle": "tigawanna (bash)"
             },
             {
-                "colorScheme": "Campbell",
-                "commandline": "C:\\WINDOWS\\system32\\wsl.exe -d Ubuntu-20.04",
-                "guid": "{f579216a-2b94-4c2d-9d47-dcd1bc93948c}",
-                "hidden": false,
-                "icon": "ms-appx:///ProfileIcons/{9acb9455-ca41-5af7-950f-6bca1bc9722f}.png",
-                "name": "property",
-                "startingDirectory": "/home/dennis/code/nodejs/property/"
-            },
-            {
                 "closeOnExit": "never",
-                "commandline": "C:\\WINDOWS\\system32\\wsl.exe fish -d Ubuntu-20.04",
+                "colorScheme": "Campbell",
+                "commandline": "wsl.exe -d Ubuntu-20.04",
                 "cursorColor": "#FFFFFF",
                 "cursorShape": "bar",
-                "guid": "{5d583934-b8db-4bdd-beb3-6e76fb99d7b4}",
+                "guid": "{2fbef62d-8dae-48eb-be20-dfdbc93eebba}",
                 "hidden": false,
                 "historySize": 9001,
                 "icon": "ms-appx:///ProfileIcons/{9acb9455-ca41-5af7-950f-6bca1bc9722f}.png",
-                "name": "PROPERTY FISH",
+                "name": "DEVHUB",
                 "padding": "0, 0, 0, 0",
                 "snapOnInput": true,
-                "startingDirectory": "/home/dennis/code/nodejs/property/",
+                "startingDirectory": "/home/dennis/code/devhub-backend",
+                "tabTitle": "DEVHUB",
                 "useAcrylic": true
-            },
-            {
-                "altGrAliasing": true,
-                "antialiasingMode": "grayscale",
-                "closeOnExit": "graceful",
-                "colorScheme": "Campbell",
-                "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
-                "cursorShape": "bar",
-                "font": {
-                    "face": "Cascadia Mono",
-                    "size": 12
-                },
-                "guid": "{5132606a-793d-4586-886f-461a56679752}",
-                "hidden": false,
-                "historySize": 9001,
-                "icon": "ms-appx:///ProfileIcons/{61c54bbd-c2c6-5271-96e7-009a87ff44bf}.png",
-                "name": "Pocket-base",
-                "padding": "8, 8, 8, 8",
-                "snapOnInput": true,
-                "startingDirectory": "C:\\Users\\denni\\Desktop\\code\\pocket",
-                "tabTitle": "pocketbase",
-                "useAcrylic": false
-            },
-            {
-                "altGrAliasing": true,
-                "antialiasingMode": "grayscale",
-                "closeOnExit": "graceful",
-                "colorScheme": "Campbell",
-                "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe  .\\pocketbase.exe serve --http=\"192.168.0.106:8090\"",
-                "cursorShape": "bar",
-                "font": {
-                    "face": "Cascadia Mono",
-                    "size": 12
-                },
-                "guid": "{bb1d2aeb-0529-4026-80d1-6858fcacc6b6}",
-                "hidden": false,
-                "historySize": 9001,
-                "icon": "ms-appx:///ProfileIcons/{61c54bbd-c2c6-5271-96e7-009a87ff44bf}.png",
-                "name": "Start pocketbase-agrho",
-                "padding": "8, 8, 8, 8",
-                "snapOnInput": true,
-                "startingDirectory": "C:\\Users\\denni\\Desktop\\code\\pocket",
-                "tabTitle": "pocketbase-agrho",
-                "useAcrylic": false
-            },
-            {
-                "altGrAliasing": true,
-                "antialiasingMode": "grayscale",
-                "closeOnExit": "graceful",
-                "colorScheme": "Campbell",
-                "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe  .\\pocketbase.exe serve --http=\"192.168.43.238:8090\"",
-                "cursorShape": "bar",
-                "font": {
-                    "face": "Cascadia Mono",
-                    "size": 12
-                },
-                "guid": "{3c3849df-6514-48be-8a99-ea38bf6372bc}",
-                "hidden": false,
-                "historySize": 9001,
-                "icon": "ms-appx:///ProfileIcons/{61c54bbd-c2c6-5271-96e7-009a87ff44bf}.png",
-                "name": "Start pocketbase home",
-                "padding": "8, 8, 8, 8",
-                "snapOnInput": true,
-                "startingDirectory": "C:\\Users\\denni\\Desktop\\code\\pocket",
-                "tabTitle": "pocketbase",
-                "useAcrylic": false
             },
             {
                 "guid": "{59b72ad2-09f7-55ec-af87-65d062af8472}",
                 "hidden": false,
                 "name": "Ubuntu 20.04.5 LTS",
                 "source": "CanonicalGroupLimited.Ubuntu20.04LTS_79rhkp1fndgsc"
-            },
-            {
-                "closeOnExit": "never",
-                "commandline": "wsl ~ sudo ssh -i ~/.ssh/school ubuntu@3.236.220.126 ",
-                "cursorColor": "#FFFFFF",
-                "cursorShape": "bar",
-                "guid": "{2cad83fd-79de-4a80-b994-7000ac71d7b3}",
-                "hidden": false,
-                "historySize": 9001,
-                "icon": "ms-appx:///ProfileIcons/{9acb9455-ca41-5af7-950f-6bca1bc9722f}.png",
-                "name": "Web-02",
-                "padding": "0, 0, 0, 0",
-                "snapOnInput": true,
-                "tabTitle": "Web-02",
-                "useAcrylic": true
-            },
-            {
-                "closeOnExit": "never",
-                "commandline": "wsl ~ sudo ssh -i ~/.ssh/school ubuntu@54.87.211.100   ",
-                "cursorColor": "#FFFFFF",
-                "cursorShape": "bar",
-                "guid": "{170dddae-615e-4de5-bc24-59ac7220bebb}",
-                "hidden": false,
-                "historySize": 9001,
-                "icon": "ms-appx:///ProfileIcons/{9acb9455-ca41-5af7-950f-6bca1bc9722f}.png",
-                "name": "Web-01",
-                "padding": "0, 0, 0, 0",
-                "snapOnInput": true,
-                "useAcrylic": true
-            },
-            {
-                "closeOnExit": "never",
-                "commandline": "wsl ~ sudo ssh -i ~/.ssh/school ubuntu@44.192.51.0   ",
-                "cursorColor": "#FFFFFF",
-                "cursorShape": "bar",
-                "guid": "{80e95368-1056-4eab-94ab-5ec7acc00f22}",
-                "hidden": false,
-                "historySize": 9001,
-                "icon": "ms-appx:///ProfileIcons/{9acb9455-ca41-5af7-950f-6bca1bc9722f}.png",
-                "name": "lb-44.192.51.0",
-                "padding": "0, 0, 0, 0",
-                "snapOnInput": true,
-                "tabTitle": "lb-44.192.51.0",
-                "useAcrylic": true
-            },
-            {
-                "closeOnExit": "never",
-                "commandline": "C:\\WINDOWS\\system32\\wsl.exe fish -d Ubuntu-20.04",
-                "cursorColor": "#FFFFFF",
-                "cursorShape": "bar",
-                "guid": "{1951753a-f59a-4ed6-89ca-74ab3144fc8e}",
-                "hidden": false,
-                "historySize": 9001,
-                "icon": "ms-appx:///ProfileIcons/{9acb9455-ca41-5af7-950f-6bca1bc9722f}.png",
-                "name": "WSL FISH PB",
-                "padding": "0, 0, 0, 0",
-                "snapOnInput": true,
-                "startingDirectory": "/home/dennis/code/gorang/pocketbase",
-                "tabTitle": "FISH-PB",
-                "useAcrylic": true
-            },
-            {
-                "altGrAliasing": true,
-                "antialiasingMode": "grayscale",
-                "closeOnExit": "graceful",
-                "colorScheme": "Campbell",
-                "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe  .\\pocketbase.exe serve --http=\"192.168.0.106:8091\"",
-                "cursorShape": "bar",
-                "font": {
-                    "face": "Cascadia Mono",
-                    "size": 12
-                },
-                "guid": "{20d6cc13-d727-436e-9ad0-7cf65b35e902}",
-                "hidden": false,
-                "historySize": 9001,
-                "icon": "ms-appx:///ProfileIcons/{61c54bbd-c2c6-5271-96e7-009a87ff44bf}.png",
-                "name": "Start pocketbase agrho-2",
-                "padding": "8, 8, 8, 8",
-                "snapOnInput": true,
-                "startingDirectory": "C:\\Users\\denni\\Desktop\\code\\pocket-2",
-                "tabTitle": "pocketbase-agrho-2",
-                "useAcrylic": false
-            },
-            {
-                "closeOnExit": "never",
-                "commandline": "C:\\WINDOWS\\system32\\wsl.exe fish -d Ubuntu-20.04",
-                "cursorColor": "#FFFFFF",
-                "cursorShape": "bar",
-                "guid": "{17a5d063-28e1-4753-a7e5-e52307038471}",
-                "hidden": false,
-                "historySize": 9001,
-                "icon": "ms-appx:///ProfileIcons/{9acb9455-ca41-5af7-950f-6bca1bc9722f}.png",
-                "name": "gorang",
-                "padding": "0, 0, 0, 0",
-                "snapOnInput": true,
-                "startingDirectory": "/home/dennis/code/gorang",
-                "tabTitle": "gorang",
-                "useAcrylic": true
-            },
-            {
-                "closeOnExit": "never",
-                "commandline": "C:\\WINDOWS\\system32\\wsl.exe fish -d Ubuntu-20.04",
-                "cursorColor": "#FFFFFF",
-                "cursorShape": "bar",
-                "guid": "{b4362e8e-a6a6-4611-ab9c-b223c7edf69b}",
-                "hidden": false,
-                "historySize": 9001,
-                "icon": "ms-appx:///ProfileIcons/{9acb9455-ca41-5af7-950f-6bca1bc9722f}.png",
-                "name": "mech-up",
-                "padding": "0, 0, 0, 0",
-                "snapOnInput": true,
-                "startingDirectory": "/home/dennis/code/mech-up",
-                "tabTitle": "mech-up",
-                "useAcrylic": true
             }
         ]
     },
@@ -562,6 +330,29 @@
             "foreground": "#FFFFFF",
             "green": "#26A269",
             "name": "Ubuntu-20.04-ColorScheme",
+            "purple": "#881798",
+            "red": "#C21A23",
+            "selectionBackground": "#FFFFFF",
+            "white": "#CCCCCC",
+            "yellow": "#A2734C"
+        },
+        {
+            "background": "#300A24",
+            "black": "#171421",
+            "blue": "#0037DA",
+            "brightBlack": "#767676",
+            "brightBlue": "#08458F",
+            "brightCyan": "#2C9FB3",
+            "brightGreen": "#26A269",
+            "brightPurple": "#A347BA",
+            "brightRed": "#C01C28",
+            "brightWhite": "#F2F2F2",
+            "brightYellow": "#A2734C",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#3A96DD",
+            "foreground": "#FFFFFF",
+            "green": "#26A269",
+            "name": "Ubuntu-ColorScheme",
             "purple": "#881798",
             "red": "#C21A23",
             "selectionBackground": "#FFFFFF",

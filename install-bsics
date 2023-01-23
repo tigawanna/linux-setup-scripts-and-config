@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# Update package list
+sudo apt-get update
+
+# Install Zsh
+sudo apt-get install zsh -y
+
+# install fish and omf 
+sudo apt-add-repository ppa:fish-shell/release-3
+sudo apt-get update
+sudo apt-get install fish
+curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
+
+
+# Install Git
+sudo apt-get install git -y
+
+# Install SQLite
+sudo apt-get install sqlite3 -y
+
+# Install Node.js
+curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+# Install Flyctl
+curl -sL https://cli.fly.io/install.sh | sh
+
