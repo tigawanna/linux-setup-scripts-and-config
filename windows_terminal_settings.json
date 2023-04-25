@@ -1,13 +1,15 @@
 {
     "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema",
-    "actions": [
+    "actions": 
+    [
         {
             "command": "paste",
             "keys": "ctrl+v"
         },
         {
-            "command": {
+            "command": 
+            {
                 "action": "copy",
                 "singleLine": false
             },
@@ -18,7 +20,8 @@
             "keys": "ctrl+shift+f"
         },
         {
-            "command": {
+            "command": 
+            {
                 "action": "splitPane",
                 "split": "auto",
                 "splitMode": "duplicate"
@@ -29,9 +32,11 @@
     "copyFormatting": "none",
     "copyOnSelect": false,
     "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
-    "profiles": {
+    "profiles": 
+    {
         "defaults": {},
-        "list": [
+        "list": 
+        [
             {
                 "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
@@ -80,9 +85,10 @@
                 "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
                 "cursorShape": "bar",
                 "elevate": true,
-                "font": {
+                "font": 
+                {
                     "face": "Cascadia Mono",
-                    "size": 12
+                    "size": 12.0
                 },
                 "guid": "{70fcb54a-eb5f-4e50-b740-fe5a62d127f5}",
                 "hidden": false,
@@ -106,7 +112,7 @@
             {
                 "closeOnExit": "never",
                 "colorScheme": "Campbell",
-                "commandline": "wsl.exe -d Ubuntu-20.04",
+                "commandline": "wsl.exe -d Ubuntu-20.04 fish",
                 "cursorColor": "#FFFFFF",
                 "cursorShape": "bar",
                 "guid": "{2fbef62d-8dae-48eb-be20-dfdbc93eebba}",
@@ -121,14 +127,149 @@
                 "useAcrylic": true
             },
             {
-                "guid": "{59b72ad2-09f7-55ec-af87-65d062af8472}",
+                "altGrAliasing": true,
+                "antialiasingMode": "grayscale",
+                "closeOnExit": "automatic",
+                "colorScheme": "Campbell",
+                "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+                "cursorShape": "bar",
+                "elevate": true,
+                "font": 
+                {
+                    "face": "Cascadia Mono",
+                    "size": 12.0
+                },
+                "guid": "{7ca1efd0-dbe3-478c-8e49-0364f9f0276c}",
                 "hidden": false,
-                "name": "Ubuntu 20.04.5 LTS",
+                "historySize": 9001,
+                "icon": "ms-appx:///ProfileIcons/{61c54bbd-c2c6-5271-96e7-009a87ff44bf}.png",
+                "name": "Windows PowerShell ADMIN",
+                "padding": "8, 8, 8, 8",
+                "snapOnInput": true,
+                "startingDirectory": "%USERPROFILE%",
+                "tabTitle": "ADMIN POWERSHELL",
+                "useAcrylic": false
+            },
+            {
+                "altGrAliasing": true,
+                "antialiasingMode": "grayscale",
+                "closeOnExit": "automatic",
+                "colorScheme": "One Half Dark",
+                "commandline": "C:\\Users\\denni\\Desktop\\code\\pb\\terminal.cmd",
+                "cursorShape": "bar",
+                "font": 
+                {
+                    "face": "Cascadia Mono",
+                    "size": 12.0
+                },
+                "guid": "{e22d117e-ae46-4cc6-a48c-8dc9c9e69e7f}",
+                "hidden": false,
+                "historySize": 9001,
+                "icon": "ms-appx:///ProfileIcons/{61c54bbd-c2c6-5271-96e7-009a87ff44bf}.png",
+                "name": "PB LAN",
+                "padding": "8, 8, 8, 8",
+                "snapOnInput": true,
+                "startingDirectory": "C:\\Users\\denni\\Desktop\\code\\pb",
+                "tabColor": "#57068D",
+                "tabTitle": "PB LAN",
+                "useAcrylic": false
+            },
+            {
+                "altGrAliasing": true,
+                "antialiasingMode": "grayscale",
+                "closeOnExit": "automatic",
+                "colorScheme": "One Half Dark",
+                "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe .\\pocketbase.exe serve --http=\"192.168.0.117:8090\"",
+                "cursorShape": "bar",
+                "font": 
+                {
+                    "face": "Cascadia Mono",
+                    "size": 12.0
+                },
+                "guid": "{a714f7a7-d00d-4c70-b92b-b53474abef9a}",
+                "hidden": false,
+                "historySize": 9001,
+                "icon": "ms-appx:///ProfileIcons/{61c54bbd-c2c6-5271-96e7-009a87ff44bf}.png",
+                "name": "PB AGR",
+                "padding": "8, 8, 8, 8",
+                "snapOnInput": true,
+                "startingDirectory": "C:\\Users\\denni\\Desktop\\code\\pb",
+                "tabTitle": "PB AGR",
+                "useAcrylic": false
+            },
+            {
+                "altGrAliasing": true,
+                "antialiasingMode": "grayscale",
+                "closeOnExit": "automatic",
+                "colorScheme": "One Half Dark",
+                "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe .\\pocketbase.exe serve --http=\"192.168.137.1:8090\"",
+                "cursorShape": "bar",
+                "font": 
+                {
+                    "face": "Cascadia Mono",
+                    "size": 12.0
+                },
+                "guid": "{d9dd7407-d412-4149-b8f2-7991ed8489f4}",
+                "hidden": false,
+                "historySize": 9001,
+                "icon": "ms-appx:///ProfileIcons/{61c54bbd-c2c6-5271-96e7-009a87ff44bf}.png",
+                "name": "PB AGR-BDR",
+                "padding": "8, 8, 8, 8",
+                "snapOnInput": true,
+                "startingDirectory": "C:\\Users\\denni\\Desktop\\code\\pb",
+                "tabTitle": "PB AGR-BDR",
+                "useAcrylic": false
+            },
+            {
+                "altGrAliasing": true,
+                "antialiasingMode": "grayscale",
+                "closeOnExit": "automatic",
+                "colorScheme": "One Half Dark",
+                "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe .\\pocketbase.exe serve --http=\"192.168.101.73:8090\"",
+                "cursorShape": "bar",
+                "font": 
+                {
+                    "face": "Cascadia Mono",
+                    "size": 12.0
+                },
+                "guid": "{16e39d0d-2adf-4eef-be47-3b47eb2e82c9}",
+                "hidden": false,
+                "historySize": 9001,
+                "icon": "ms-appx:///ProfileIcons/{61c54bbd-c2c6-5271-96e7-009a87ff44bf}.png",
+                "name": "PB NIANG",
+                "padding": "8, 8, 8, 8",
+                "snapOnInput": true,
+                "startingDirectory": "C:\\Users\\denni\\Desktop\\code\\pb",
+                "tabTitle": "PB NIANG",
+                "useAcrylic": false
+            },
+            {
+                "guid": "{4dd1e689-b517-5f39-947d-78e8a8bdf958}",
+                "hidden": false,
+                "name": "Ubuntu 20.04.6 LTS",
                 "source": "CanonicalGroupLimited.Ubuntu20.04LTS_79rhkp1fndgsc"
+            },
+            {
+                "closeOnExit": "never",
+                "colorScheme": "Campbell",
+                "commandline": "wsl.exe -d Ubuntu-20.04 fish",
+                "cursorColor": "#FFFFFF",
+                "cursorShape": "bar",
+                "guid": "{72759d91-9ea9-41f5-8683-5edf8fcc289e}",
+                "hidden": false,
+                "historySize": 9001,
+                "icon": "ms-appx:///ProfileIcons/{9acb9455-ca41-5af7-950f-6bca1bc9722f}.png",
+                "name": "prime",
+                "padding": "0, 0, 0, 0",
+                "snapOnInput": true,
+                "startingDirectory": "/home/dennis/code/prime",
+                "tabTitle": "PRIME",
+                "useAcrylic": true
             }
         ]
     },
-    "schemes": [
+    "schemes": 
+    [
         {
             "background": "#0C0C0C",
             "black": "#0C0C0C",
@@ -383,5 +524,6 @@
             "yellow": "#808000"
         }
     ],
+    "themes": [],
     "windowingBehavior": "useAnyExisting"
 }
