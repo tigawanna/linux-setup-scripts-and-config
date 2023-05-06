@@ -1,3 +1,4 @@
+# ~/.config/fish/config.fish
 # set -g fish_user_paths "/usr/local/go/bin" $fish_user_paths
 
 set -x GOROOT  /usr/local/go
