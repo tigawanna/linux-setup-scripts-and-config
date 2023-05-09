@@ -3,8 +3,7 @@
 # Update package list
 sudo apt-get update
 
-# Install Zsh
-sudo apt-get install zsh -y
+sudo apt install curl
 
 # install fish and omf 
 sudo apt-add-repository ppa:fish-shell/release-3

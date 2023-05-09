@@ -7,20 +7,5 @@ set -x PATH $PATH $GOROOT/bin
 set -x GOPATH $HOME/golibs
 set -x PATH $PATH $GOPATH/bin
 
-set  -x TEST DEEZNUTS
-
-# set -x HBNB_ENV 
-# set -x HBNB_MYSQL_USER
-# set -x HBNB_MYSQL_PWD
-# set -x HBNB_MYSQL_HOST
-# set -x HBNB_MYSQL_DB
-# set -x HBNB_TYPE_STORAGE
 
 
-
-backend mybackend
-mode            http
-balance         roundrobin
-option          httpchk /test.html
-server          server1.example.com server1.example.com:80 weight 1 check port 80 inter 5s rise 3 fall 2
-server          server2.example.com server2.example.com:80 backup weight 1 check port 80 inter 5s rise 3 fall 2
