@@ -25,3 +25,7 @@ sudo apt-get install -y nodejs
 # Install Flyctl
 curl -sL https://cli.fly.io/install.sh | sh
 
+
+#  configure git.name and git.email
+git config --global user.name "tigawanna"
+git config --global user.email "denniskinuthiaw@gmail.com"
