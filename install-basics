@@ -29,13 +29,10 @@ sudo apt-get install -y sqlite3
 echo "SQLite has been installed successfully!"
 
 # Install PostgreSQL 15
-sudo apt-get install -y postgresql-15
-# Start and enable the PostgreSQL service
-sudo systemctl start postgresql
-sudo systemctl enable postgresql
-# Set the password for the default PostgreSQL user 'postgres'
-sudo passwd postgres
-echo "PostgreSQL 15 has been installed successfully!"
+sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+wget -qO- https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo tee /etc/apt/trusted.gpg.d/pgdg.asc &>/dev/null
+sudo apt update
+sudo apt install postgresql postgresql-client -y
 
 # Install Node.js 20 using nvm
 # Install NVM (Node Version Manager)
