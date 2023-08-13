@@ -3,29 +3,64 @@
 # Update package list
 sudo apt-get update
 
-sudo apt install curl
+# Install curl
+sudo apt-get install -y curl
 
-# install fish and omf 
-sudo apt-add-repository ppa:fish-shell/release-3
+# Install zip and unzip
+sudo apt-get install -y zip unzip
+echo "Zip and unzip tools have been installed successfully!"
+
+# Install fish shell and oh-my-fish
+sudo apt-add-repository -y ppa:fish-shell/release-3
 sudo apt-get update
-sudo apt-get install fish
-curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
-
+sudo apt-get install -y fish
+curl -L https://get.oh-my.fish | fish
+echo "Fish shell and oh-my-fish have been installed successfully!"
 
 # Install Git
-sudo apt-get install git -y
+sudo apt-get install -y git
+# Configure git.name and git.email
+git config --global user.name "tigawanna"
+git config --global user.email "denniskinuthiaw@gmail.com"
+echo "Git has been installed successfully!"
 
 # Install SQLite
-sudo apt-get install sqlite3 -y
+sudo apt-get install -y sqlite3
+echo "SQLite has been installed successfully!"
 
-# Install Node.js
-curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
-sudo apt-get install -y nodejs
+# Install PostgreSQL 15
+sudo apt-get install -y postgresql-15
+# Start and enable the PostgreSQL service
+sudo systemctl start postgresql
+sudo systemctl enable postgresql
+# Set the password for the default PostgreSQL user 'postgres'
+sudo passwd postgres
+echo "PostgreSQL 15 has been installed successfully!"
+
+# Install Node.js 20 using nvm
+# Install NVM (Node Version Manager)
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+# Activate NVM
+source ~/.nvm/nvm.sh
+# Install Node.js 20
+nvm install 20
+# Set Node.js 20 as the default version
+nvm alias default 20
+echo "Node.js 20 has been installed successfully!"
+
+
+# Install bun
+curl -fsSL https://bun.sh/install | bash
+echo "Bun has been installed successfully!"
+
+# Install deno
+curl -fsSL https://deno.land/x/install/install.sh | sh
+echo "Deno has been installed successfully!"
 
 # Install Flyctl
 curl -sL https://cli.fly.io/install.sh | sh
+echo "Flyctl has been installed successfully!"
 
-
-#  configure git.name and git.email
-git config --global user.name "tigawanna"
-git config --global user.email "denniskinuthiaw@gmail.com"
+# add fish-nvm
+# omf install https://github.com/fabioantunes/fish-nvm
+# omf install https://github.com/edc/bass
