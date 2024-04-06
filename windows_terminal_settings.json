@@ -32,6 +32,12 @@
     "copyFormatting": "none",
     "copyOnSelect": false,
     "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+    "newTabMenu": 
+    [
+        {
+            "type": "remainingProfiles"
+        }
+    ],
     "profiles": 
     {
         "defaults": {},
@@ -57,34 +63,12 @@
                 "startingDirectory": "%USERPROFILE%"
             },
             {
-                "guid": "{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
-                "hidden": true,
-                "name": "Ubuntu-20.04",
-                "source": "Windows.Terminal.Wsl"
-            },
-            {
-                "closeOnExit": "never",
-                "commandline": "ubuntu2004.exe",
-                "cursorColor": "#FFFFFF",
-                "cursorShape": "bar",
-                "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
-                "hidden": false,
-                "historySize": 9001,
-                "icon": "https://assets.ubuntu.com/v1/49a1a858-favicon-32x32.png",
-                "name": "WSL BASH",
-                "padding": "0, 0, 0, 0",
-                "snapOnInput": true,
-                "source": "CanonicalGroupLimited.Ubuntu_79rhkp1fndgsc",
-                "useAcrylic": true
-            },
-            {
                 "altGrAliasing": true,
                 "antialiasingMode": "grayscale",
                 "closeOnExit": "graceful",
                 "colorScheme": "Campbell",
                 "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
                 "cursorShape": "bar",
-                "elevate": true,
                 "font": 
                 {
                     "face": "Cascadia Mono",
@@ -101,30 +85,68 @@
                 "useAcrylic": false
             },
             {
-                "commandline": "%PROGRAMFILES%/Git/usr/bin/bash.exe -i -l",
-                "guid": "{48dbc08c-e3bd-41b6-b129-c7dba6710bd9}",
-                "hidden": false,
-                "icon": "%PROGRAMFILES%/Git/mingw64/share/git/git-for-windows.ico",
-                "name": "Bash tigawanna",
-                "startingDirectory": "C:\\Users\\denni\\Desktop\\code\\tigawanna",
-                "tabTitle": "tigawanna (bash)"
-            },
-            {
                 "closeOnExit": "never",
                 "colorScheme": "Campbell",
-                "commandline": "wsl.exe -d Ubuntu-20.04 fish",
+                "commandline": "wsl.exe ~",
                 "cursorColor": "#FFFFFF",
                 "cursorShape": "bar",
                 "guid": "{2fbef62d-8dae-48eb-be20-dfdbc93eebba}",
                 "hidden": false,
                 "historySize": 9001,
                 "icon": "ms-appx:///ProfileIcons/{9acb9455-ca41-5af7-950f-6bca1bc9722f}.png",
-                "name": "DEVHUB",
+                "name": "LINUX",
                 "padding": "0, 0, 0, 0",
                 "snapOnInput": true,
-                "startingDirectory": "/home/dennis/code/devhub-backend",
-                "tabTitle": "DEVHUB",
+                "startingDirectory": null,
+                "tabTitle": "LINUX",
                 "useAcrylic": true
+            },
+            {
+                "colorScheme": "Campbell",
+                "commandline": "wsl.exe ~ fish",
+                "cursorColor": "#ADCA05",
+                "guid": "{745fb696-323c-4974-9bb5-6587e32c3dec}",
+                "hidden": false,
+                "icon": "ms-appx:///ProfileIcons/{9acb9455-ca41-5af7-950f-6bca1bc9722f}.png",
+                "name": "FISH",
+                "startingDirectory": "%USERPROFILE%",
+                "tabTitle": "FISH"
+            },
+            {
+                "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
+                "hidden": true,
+                "name": "Ubuntu",
+                "source": "Windows.Terminal.Wsl"
+            },
+            {
+                "guid": "{51855cb2-8cce-5362-8f54-464b92b32386}",
+                "hidden": false,
+                "name": "Ubuntu",
+                "source": "CanonicalGroupLimited.Ubuntu_79rhkp1fndgsc"
+            },
+            {
+                "altGrAliasing": true,
+                "antialiasingMode": "grayscale",
+                "closeOnExit": "automatic",
+                "colorScheme": "Campbell",
+                "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe ./pocketbase.exe serve",
+                "cursorShape": "bar",
+                "font": 
+                {
+                    "face": "Cascadia Mono",
+                    "size": 12.0
+                },
+                "guid": "{fce8eb5f-222a-4646-b893-a3bad8a6c2df}",
+                "hidden": false,
+                "historySize": 9001,
+                "icon": "ms-appx:///ProfileIcons/{61c54bbd-c2c6-5271-96e7-009a87ff44bf}.png",
+                "name": "pb serve",
+                "padding": "8, 8, 8, 8",
+                "snapOnInput": true,
+                "startingDirectory": "C:\\Users\\denni\\Desktop\\code\\pb\\v0.19-fly",
+                "tabColor": "#44E7D9",
+                "tabTitle": "pb serve",
+                "useAcrylic": false
             },
             {
                 "altGrAliasing": true,
@@ -133,138 +155,66 @@
                 "colorScheme": "Campbell",
                 "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
                 "cursorShape": "bar",
-                "elevate": true,
                 "font": 
                 {
                     "face": "Cascadia Mono",
                     "size": 12.0
                 },
-                "guid": "{7ca1efd0-dbe3-478c-8e49-0364f9f0276c}",
+                "guid": "{01b0369a-7e4d-4134-84f6-58854f7440e4}",
                 "hidden": false,
                 "historySize": 9001,
                 "icon": "ms-appx:///ProfileIcons/{61c54bbd-c2c6-5271-96e7-009a87ff44bf}.png",
-                "name": "Windows PowerShell ADMIN",
+                "name": "scribble rakkas",
                 "padding": "8, 8, 8, 8",
                 "snapOnInput": true,
-                "startingDirectory": "%USERPROFILE%",
-                "tabTitle": "ADMIN POWERSHELL",
+                "startingDirectory": "C:\\Users\\denni\\Desktop\\code\\rakkas\\scribble",
+                "tabColor": "#DF247B",
                 "useAcrylic": false
             },
             {
                 "altGrAliasing": true,
                 "antialiasingMode": "grayscale",
                 "closeOnExit": "automatic",
-                "colorScheme": "One Half Dark",
-                "commandline": "C:\\Users\\denni\\Desktop\\code\\pb\\terminal.cmd",
-                "cursorShape": "bar",
-                "font": 
-                {
-                    "face": "Cascadia Mono",
-                    "size": 12.0
-                },
-                "guid": "{e22d117e-ae46-4cc6-a48c-8dc9c9e69e7f}",
-                "hidden": false,
-                "historySize": 9001,
-                "icon": "ms-appx:///ProfileIcons/{61c54bbd-c2c6-5271-96e7-009a87ff44bf}.png",
-                "name": "PB LAN",
-                "padding": "8, 8, 8, 8",
-                "snapOnInput": true,
-                "startingDirectory": "C:\\Users\\denni\\Desktop\\code\\pb",
-                "tabColor": "#57068D",
-                "tabTitle": "PB LAN",
-                "useAcrylic": false
-            },
-            {
-                "altGrAliasing": true,
-                "antialiasingMode": "grayscale",
-                "closeOnExit": "automatic",
-                "colorScheme": "One Half Dark",
-                "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe .\\pocketbase.exe serve --http=\"192.168.0.117:8090\"",
-                "cursorShape": "bar",
-                "font": 
-                {
-                    "face": "Cascadia Mono",
-                    "size": 12.0
-                },
-                "guid": "{a714f7a7-d00d-4c70-b92b-b53474abef9a}",
-                "hidden": false,
-                "historySize": 9001,
-                "icon": "ms-appx:///ProfileIcons/{61c54bbd-c2c6-5271-96e7-009a87ff44bf}.png",
-                "name": "PB AGR",
-                "padding": "8, 8, 8, 8",
-                "snapOnInput": true,
-                "startingDirectory": "C:\\Users\\denni\\Desktop\\code\\pb",
-                "tabTitle": "PB AGR",
-                "useAcrylic": false
-            },
-            {
-                "altGrAliasing": true,
-                "antialiasingMode": "grayscale",
-                "closeOnExit": "automatic",
-                "colorScheme": "One Half Dark",
-                "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe .\\pocketbase.exe serve --http=\"192.168.137.1:8090\"",
-                "cursorShape": "bar",
-                "font": 
-                {
-                    "face": "Cascadia Mono",
-                    "size": 12.0
-                },
-                "guid": "{d9dd7407-d412-4149-b8f2-7991ed8489f4}",
-                "hidden": false,
-                "historySize": 9001,
-                "icon": "ms-appx:///ProfileIcons/{61c54bbd-c2c6-5271-96e7-009a87ff44bf}.png",
-                "name": "PB AGR-BDR",
-                "padding": "8, 8, 8, 8",
-                "snapOnInput": true,
-                "startingDirectory": "C:\\Users\\denni\\Desktop\\code\\pb",
-                "tabTitle": "PB AGR-BDR",
-                "useAcrylic": false
-            },
-            {
-                "altGrAliasing": true,
-                "antialiasingMode": "grayscale",
-                "closeOnExit": "automatic",
-                "colorScheme": "One Half Dark",
-                "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe .\\pocketbase.exe serve --http=\"192.168.101.73:8090\"",
-                "cursorShape": "bar",
-                "font": 
-                {
-                    "face": "Cascadia Mono",
-                    "size": 12.0
-                },
-                "guid": "{16e39d0d-2adf-4eef-be47-3b47eb2e82c9}",
-                "hidden": false,
-                "historySize": 9001,
-                "icon": "ms-appx:///ProfileIcons/{61c54bbd-c2c6-5271-96e7-009a87ff44bf}.png",
-                "name": "PB NIANG",
-                "padding": "8, 8, 8, 8",
-                "snapOnInput": true,
-                "startingDirectory": "C:\\Users\\denni\\Desktop\\code\\pb",
-                "tabTitle": "PB NIANG",
-                "useAcrylic": false
-            },
-            {
-                "guid": "{4dd1e689-b517-5f39-947d-78e8a8bdf958}",
-                "hidden": false,
-                "name": "Ubuntu 20.04.6 LTS",
-                "source": "CanonicalGroupLimited.Ubuntu20.04LTS_79rhkp1fndgsc"
-            },
-            {
-                "closeOnExit": "never",
                 "colorScheme": "Campbell",
-                "commandline": "wsl.exe -d Ubuntu-20.04 fish",
-                "cursorColor": "#FFFFFF",
+                "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe ./pocketbase.exe serve",
                 "cursorShape": "bar",
-                "guid": "{72759d91-9ea9-41f5-8683-5edf8fcc289e}",
+                "font": 
+                {
+                    "face": "Cascadia Mono",
+                    "size": 12.0
+                },
+                "guid": "{3533bd4a-ab35-443d-839f-e51b76163528}",
                 "hidden": false,
                 "historySize": 9001,
-                "icon": "ms-appx:///ProfileIcons/{9acb9455-ca41-5af7-950f-6bca1bc9722f}.png",
-                "name": "prime",
-                "padding": "0, 0, 0, 0",
+                "icon": "ms-appx:///ProfileIcons/{61c54bbd-c2c6-5271-96e7-009a87ff44bf}.png",
+                "name": "scribble pb fly",
+                "padding": "8, 8, 8, 8",
                 "snapOnInput": true,
-                "startingDirectory": "/home/dennis/code/prime",
-                "tabTitle": "PRIME",
-                "useAcrylic": true
+                "startingDirectory": "C:\\Users\\denni\\Desktop\\code\\pb\\v0.19-fly",
+                "tabColor": "#44E7D9",
+                "useAcrylic": false
+            },
+            {
+                "colorScheme": "Campbell",
+                "commandline": "code/kata-machine wsl.exe  ~ fish ",
+                "cursorColor": "#ADCA05",
+                "guid": "{f4396583-7b50-48f3-832e-d399e541da51}",
+                "hidden": false,
+                "icon": "ms-appx:///ProfileIcons/{9acb9455-ca41-5af7-950f-6bca1bc9722f}.png",
+                "name": "PRIME",
+                "startingDirectory": null,
+                "tabTitle": "PRIME"
+            },
+            {
+                "colorScheme": "Campbell",
+                "commandline": "wsl.exe  ~ fish",
+                "cursorColor": "#ADCA05",
+                "guid": "{6ca6bab6-29bc-4ed5-90c8-bcdbef7c41d8}",
+                "hidden": false,
+                "icon": "ms-appx:///ProfileIcons/{9acb9455-ca41-5af7-950f-6bca1bc9722f}.png",
+                "name": "PRIME (Copy)",
+                "startingDirectory": "%USERPROFILE%/nodejs",
+                "tabTitle": "PRIME"
             }
         ]
     },
@@ -471,6 +421,29 @@
             "foreground": "#FFFFFF",
             "green": "#26A269",
             "name": "Ubuntu-20.04-ColorScheme",
+            "purple": "#881798",
+            "red": "#C21A23",
+            "selectionBackground": "#FFFFFF",
+            "white": "#CCCCCC",
+            "yellow": "#A2734C"
+        },
+        {
+            "background": "#300A24",
+            "black": "#171421",
+            "blue": "#0037DA",
+            "brightBlack": "#767676",
+            "brightBlue": "#08458F",
+            "brightCyan": "#2C9FB3",
+            "brightGreen": "#26A269",
+            "brightPurple": "#A347BA",
+            "brightRed": "#C01C28",
+            "brightWhite": "#F2F2F2",
+            "brightYellow": "#A2734C",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#3A96DD",
+            "foreground": "#FFFFFF",
+            "green": "#26A269",
+            "name": "Ubuntu-22.04-ColorScheme",
             "purple": "#881798",
             "red": "#C21A23",
             "selectionBackground": "#FFFFFF",
