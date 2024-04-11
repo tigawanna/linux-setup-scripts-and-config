@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-VER=1.21.0
+VER=1.22.0
 
 sudo wget -c https://golang.org/dl/go$VER.linux-amd64.tar.gz
 sudo rm -rf /usr/local/go
