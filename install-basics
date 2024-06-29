@@ -48,6 +48,18 @@ sudo sh -c 'echo "deb [signed-by=/usr/share/keyrings/packages-pgadmin-org.gpg] h
 sudo apt install pgadmin4
 # Install for desktop mode only:
 sudo apt install pgadmin4-desktop
+echo "
+follow steps to setup psql
+sudo -u postgres psql
+could not change directory to "/home/dennis/Desktop/code/react/rakkasjs/bunge-la-raia-rakkas-main": Permission denied
+psql (14.12 (Ubuntu 14.12-0ubuntu0.22.04.1))
+Type "help" for help.
+
+postgres=# \password postgres
+Enter new password for user "postgres": 
+Enter it again: 
+postgres=# \q
+"
 echo "============== PG admin has been installed successfully! =============="
 
 echo "============== Installing Podman + Docker =============="
@@ -147,4 +159,18 @@ echo "============== Adding fish envs =============="
 curl -L https://get.oh-my.fish | fish
 echo "============== Fish shell and oh-my-fish have been installed successfully! =============="
 
+echo "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+echo "check script for for instructio on how to setup bashrc an fish config" 
+echo "
+remember to add follow steps to setup psql
+sudo -u postgres psql
+could not change directory to "/home/dennis/Desktop/code/react/rakkasjs/bunge-la-raia-rakkas-main": Permission denied
+psql (14.12 (Ubuntu 14.12-0ubuntu0.22.04.1))
+Type "help" for help.
 
+postgres=# \password postgres
+Enter new password for user "postgres": 
+Enter it again: 
+postgres=# \q
+"
+echo "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
