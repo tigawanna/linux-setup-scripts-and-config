@@ -1,20 +1,25 @@
 #!/bin/bash
 GO_VER=1.22.0
 NODE_VER=21
-PG_VER=15
+PG_VER=16
 # Update package list
 sudo apt-get update
 
 # Install curl
+echo "============== Installing curl =============="
 sudo apt-get install -y curl
+echo "============== Curl has been installed successfully! =============="
+
 
 # Install zip and unzip
+echo "============== Installing zip and unzip =============="
 sudo apt-get install -y zip unzip
 echo "============== Zip and unzip tools have been installed successfully! =============== "
 
 
 
 # Install Git
+echo "============== Installing Git =============="
 sudo apt-get install -y git
 # Configure git.name and git.email
 git config --global user.name "tigawanna"
@@ -22,71 +27,65 @@ git config --global user.email "denniskinuthiaw@gmail.com"
 echo "============== Git has been installed successfully! =============="
 
 # Install SQLite
+echo "============== Installing SQLite =============="
 sudo apt-get install -y sqlite3
 echo "============== SQLite has been installed successfully! =============="
 
 # Install PostgreSQL 15
+echo "============== Installing PostgreSQL =============="
 sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
 wget -qO- https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo tee /etc/apt/trusted.gpg.d/pgdg.asc &>/dev/null
 # Install PostgreSQL
 sudo apt install postgresql postgresql-client -y
 echo "============== PostgreSQL has been installed successfully! =============="
 
-# Add PostgreSQL repository
-# echo "Adding PostgreSQL $PG_VER repository..."
-# if ! sudo sh -c "echo \"deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main\" > /etc/apt/sources.list.d/pgdg.list"; then
-#   echo "Error: Failed to add repository. Please check your privileges and network connection."
-#   exit 1
-# fi
+echo "============== Installing PG admin =============="
+# Install the public key for the repository (if not done previously):
+curl -fsS https://www.pgadmin.org/static/packages_pgadmin_org.pub | sudo gpg --dearmor -o /usr/share/keyrings/packages-pgadmin-org.gpg
+# Create the repository configuration file:
+sudo sh -c 'echo "deb [signed-by=/usr/share/keyrings/packages-pgadmin-org.gpg] https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/jammy pgadmin4 main" > /etc/apt/sources.list.d/pgadmin4.list && apt update'
+# Install for both desktop and web modes:
+sudo apt install pgadmin4
+# Install for desktop mode only:
+sudo apt install pgadmin4-desktop
+echo "============== PG admin has been installed successfully! =============="
 
-# # Import GPG key using apt-key (recommended)
-# echo "Importing PostgreSQL GPG key..."
-# if ! sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys ACCC4CF8; then
-#   echo "Error: Failed to import GPG key. Please check your network connection."
-#   exit 1
-# fi
+echo "============== Installing Podman + Docker =============="
+sudo apt-get -y install podman docker
+echo "============== Podman + Docker has been installed successfully! =============="
 
-# # Update package lists
-# echo "Updating package lists..."
-# if ! sudo apt update; then
-#   echo "Error: Failed to update package lists."
-#   exit 1
-# fi
 
-# # Install PostgreSQL server and client packages
-# echo "Installing PostgreSQL $PG_VER..."
-# if ! sudo apt install postgresql-$PG_VER postgresql-$PG_VER-client -y; then
-#   echo "Error: Failed to install PostgreSQL packages."
-#   exit 1
-# fi
-
-# # Success message
-# echo "============== PostgreSQL $PG_VER has been installed successfully! =============="
-
-# Install Node.js 20 using nvm
-# Install NVM (Node Version Manager)
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
 # Activate NVM
 source ~/.nvm/nvm.sh
 # Install Node.js 20
 nvm install $NODE_VER
 # Set Node.js 20 as the default version
+echo "============== Installing Node.js $NODE_VER =============="
 nvm alias default $NODE_VER
+npm install -g pnpm
 echo "============== Node.js $NODE_VER has been installed successfully! =============="
 
 
 # Install bun
+echo "============== Installing Bun =============="
 curl -fsSL https://bun.sh/install | bash
 echo "============== Bun has been installed successfully! =============="
 
 # Install deno
+echo "============== Installing Deno =============="
 curl -fsSL https://deno.land/x/install/install.sh | sh
 echo "============== Deno has been installed successfully! =============="
 
 # Install Flyctl
+echo "============== Installnig flyio cli =============="
 curl -sL https://cli.fly.io/install.sh | sh
-echo "============== Flyctl has been installed successfully! =============="
+echo "============== Flyio cli has been installed successfully! =============="
 
+
+
+# install go
+echo "============== Installing Go... =============="
 sudo wget -c https://golang.org/dl/go$GO_VER.linux-amd64.tar.gz
 sudo rm -rf /usr/local/go
 sudo tar -C /usr/local  -xvzf go$GO_VER.linux-amd64.tar.gz
@@ -94,18 +93,12 @@ sudo rm -rf go$GO_VER.linux-amd64.tar.gz
 echo "============== Go has been installed successfully! =============="
 
 
-echo `
+echo "============== adding .bashrc variables =============="
+sudo echo `
 # add below variables 
 # better ls colors
 LS_COLORS='ex=01;91:rs=0:di=1;33:ln=01;35:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=01;35;40:st=37;44:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lz=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;35:*.au=00;35:*.flac=00;35:*.mid=00;35:*.midi=00;35:*.mka=00;35:*.mp3=00;35:*.mpc=00;35:*.ogg=00;35:*.ra=00;35:*.wav=00;35:*.axa=00;35:*.oga=00;35:*.spx=00;35:*.xspf=00;35:';
 export LS_COLORS
-# # go
-# export GOROOT=/usr/local/go
-# export PATH=$PATH:$GOROOT/bin
-# # go
-# export GOPATH=/home/dennis/golibs
-# export PATH=$PATH:$GOPATH/bin
-
 # go
 export PATH=$PATH:/usr/local/go/bin
 
@@ -122,30 +115,22 @@ export PATH=$BUN_INSTALL/bin:$PATH
 export DENO_INSTALL="/home/dennis/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 alias pp='pnpm'
+>> "~/.bashrc"
+echo "============== Successfully added fish envs =============="
 
-`>> "~/.bashrc"
 
 
-
-# add fish-nvm
-# omf install https://github.com/fabioantunes/fish-nvm
-# omf install https://github.com/edc/bass
-
-# Install fish shell and oh-my-fish
+echo "============== Installing fish =============="
 sudo apt-add-repository -y ppa:fish-shell/release-3
 sudo apt-get update
 sudo apt-get install -y fish
-echo`
-# Commands to run in interactive sessions can go here
+echo "============== Fish has been installed successfully! =============="
+
+
+echo "============== Adding fish envs ==============" 
+sudo echo`
+set -x  PATH /home/dennis/.nvm/versions/node/v21.7.3/bin $PATH
 set -x LS_COLORS 'ex=01;91:rs=0:di=1;33:ln=01;35:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=01;35;40:st=37;44:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lz=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;35:*.au=00;35:*.flac=00;35:*.mid=00;35:*.midi=00;35:*.mka=00;35:*.mp3=00;35:*.mpc=00;35:*.ogg=00;35:*.ra=00;35:*.wav=00;35:*.axa=00;35:*.oga=00;35:*.spx=00;35:*.xspf=00;35:';
-
-
-# set -x GOROOT /usr/local/go
-# set -x  PATH $PATH:$GOROOT/bin
-
-# set -x GOPATH /home/dennis/golibs
-# set -x  PATH $PATH:$GOPATH/bin
-
 #  go
 set -x  PATH $PATH:/usr/local/go/bin
 
@@ -158,9 +143,12 @@ set -x  PATH $BUN_INSTALL/bin:$PATH
 set -x  DENO_INSTALL "/home/dennis/.deno"
 set -x  PATH "$DENO_INSTALL/bin:$PATH"
 
+# fly cli
+set -x  FLYCTL_INSTALL "/home/dennis/.fly"
+set -x  PATH "$FLYCTL_INSTALL/bin:$PATH"
 alias pp='pnpm'
 `>>"~/.config/fish/config.fish"
-
+echo "============== Adding fish envs ==============" 
 
 curl -L https://get.oh-my.fish | fish
 echo "============== Fish shell and oh-my-fish have been installed successfully! =============="
