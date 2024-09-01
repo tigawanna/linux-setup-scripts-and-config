@@ -10,7 +10,7 @@ sudo apt install zip -y
 sudo unzip -q pocketbase_${version}_linux_amd64.zip -d /home/ubuntu/pb
 sudo chmod +x /home/ubuntu/pb/pocketbase
 echo "========= pocketbase version ${version} has been downloaded and unzipped into /home/ubuntu/pb successfully! ======="
-sudo rm -rf pocketbase_${version}_darwin_amd64.zip
+sudo rm -rf pocketbase_${version}_inux_amd64.zip
 echo "========= setting up a systemd service ======= "
 # setup a systemd service service
 sudo touch /lib/systemd/system/pocketbase.service
