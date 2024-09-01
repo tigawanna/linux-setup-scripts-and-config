@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
 
 version="0.22.20"
-pocketbase_url="https://github.com/pocketbase/pocketbase/releases/download/v${version}/pocketbase_${version}_darwin_amd64.zip"
+pocketbase_url="https://github.com/pocketbase/pocketbase/releases/download/v${version}/pocketbase_${version}_linux_amd64.zip"
+
 echo "========= downloading pocketbase version ${version} ======="
 wget -q - "$pocketbase_url"
 echo "========= unzipping pocketbase version ${version} ======="
-sudo apt install zip
+sudo apt install zip -y
 sudo unzip -q pocketbase_${version}_darwin_amd64.zip -d /home/ubuntu/pb
 sudo chmod +x /home/ubuntu/pb/pocketbase
 echo "========= pocketbase version ${version} has been downloaded and unzipped into /home/ubuntu/pb successfully! ======="
