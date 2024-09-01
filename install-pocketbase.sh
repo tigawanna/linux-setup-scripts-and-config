@@ -2,11 +2,13 @@
 
 version="0.22.20"
 pocketbase_url="https://github.com/pocketbase/pocketbase/releases/download/v${version}/pocketbase_${version}_darwin_amd64.zip"
+echo "========= downloading pocketbase version ${version} ======="
 wget -q - "$pocketbase_url"
+echo "========= unzipping pocketbase version ${version} ======="
 sudo unzip -q pocketbase_${version}_darwin_amd64.zip -d ./pb
 sudo chmod +x ./pb/pocketbase
-rm -rf pocketbase_${version}_darwin_amd64.zip
-
+echo "========= pocketbase version ${version} has been downloaded and unzipped successfully! ======="
+sudo rm -rf pocketbase_${version}_darwin_amd64.zip
 echo "========= setting up a systemd service ======= "
 # setup a systemd service service
 sudo touch /lib/systemd/system/pocketbase.service
