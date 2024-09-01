@@ -7,7 +7,7 @@ wget -q - "$pocketbase_url"
 echo "========= unzipping pocketbase version ${version} ======="
 sudo apt install zip
 sudo unzip -q pocketbase_${version}_darwin_amd64.zip -d /home/ubuntu/pb
-sudo chmod +x ./home/ubuntu/pb/pocketbase
+sudo chmod +x /home/ubuntu/pb/pocketbase
 echo "========= pocketbase version ${version} has been downloaded and unzipped into /home/ubuntu/pb successfully! ======="
 sudo rm -rf pocketbase_${version}_darwin_amd64.zip
 echo "========= setting up a systemd service ======= "
