@@ -10,7 +10,7 @@ sudo apt install zip -y
 sudo unzip -q pocketbase_${version}_linux_amd64.zip -d /home/ubuntu/pb
 sudo chmod +x /home/ubuntu/pb/pocketbase
 echo "========= pocketbase version ${version} has been downloaded and unzipped into /home/ubuntu/pb successfully! ======="
-sudo rm -rf pocketbase_${version}_inux_amd64.zip
+sudo rm -rf pocketbase_${version}_linux_amd64.zip
 echo "========= setting up a systemd service ======= "
 # setup a systemd service service
 sudo touch /lib/systemd/system/pocketbase.service
@@ -38,3 +38,18 @@ WantedBy = multi-user.target
 sudo systemctl daemon-reload
 sudo systemctl enable pocketbase.service
 sudo systemctl start pocketbase
+
+
+sudo iptables -I INPUT 6 -m state --state NEW -p tcp --dport 80 -j ACCEPT
+sudo iptables -I INPUT 6 -m state --state NEW -p tcp --dport 443 -j ACCEPT
+sudo iptables -I INPUT 6 -m state --state NEW -p tcp --dport 8090 -j ACCEPT
+sudo netfilter-persistent save
+
+
+
+
+
+
+
+
+
