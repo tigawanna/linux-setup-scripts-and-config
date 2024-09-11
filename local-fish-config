@@ -9,7 +9,10 @@ set -x  PATH $PATH:$GOROOT/bin
 set -x GOPATH /home/dennis/golibs
 set -x  PATH $PATH:$GOPATH/bin
 
-
+# nvm
+function nvm
+    bass source ~/.nvm/nvm.sh --no-use ';' nvm $argv
+end
 
 # bun
 set -x  BUN_INSTALL "$HOME/.bun"

@@ -179,7 +179,11 @@ export DENO_INSTALL="/home/dennis/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 alias pp='pnpm'
 "
-
+echo "============== Adding fisher package manager  =============="
+curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
+echo "============== fisher package manager has been installed successfully! =============="
+echo "+++++++++++++++++++++++++++ add bass from fisher ++++++++++++++++++++++++++++++"
+fisher install edc/bass
 echo "+++++++++++++++++++++++++++ fish config setup++++++++++++++++++++++++++++++"
 echo "# append the below to ~/.config/fish/config.fish
 set -x  PATH /home/dennis/.nvm/versions/node/v21.7.3/bin $PATH
