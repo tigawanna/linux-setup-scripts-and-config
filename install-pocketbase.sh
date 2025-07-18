@@ -36,11 +36,12 @@ RestartSec     = 5s
 StandardOutput   = append:/home/ubuntu/${project_name}/errors.log
 StandardError    = append:/home/ubuntu/${project_name}/errors.log
 WorkingDirectory = /home/ubuntu/${project_name}/
-ExecStart      = /home/ubuntu/${project_name}/pocketbase serve
+ExecStart      = /home/ubuntu/${project_name}/pocketbase serve --http="127.0.0.1:${port}"
 
 [Install]
 WantedBy = multi-user.target
 " | sudo tee /lib/systemd/system/${project_name}-pocketbase.service
+
 
 
 sudo systemctl daemon-reload
