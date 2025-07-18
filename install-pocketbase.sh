@@ -48,6 +48,13 @@ sudo systemctl daemon-reload
 sudo systemctl enable ${project_name}-pocketbase.service
 sudo systemctl start ${project_name}-pocketbase
 
+echo "========= creating default superuser ======="
+# Wait a moment for the service to fully start
+sleep 3
+# Create default superuser
+cd /home/ubuntu/${project_name}
+sudo ./pocketbase superuser upsert denniskinuthiaw@gmail.com denniskinuthiaw@gmail.com
+
 echo "========= adding caddy configuration ======="
 # Add subdomain configuration to Caddyfile
 caddy_config="
@@ -82,3 +89,5 @@ echo "Project: ${project_name}"
 echo "Port: ${port}"
 echo "Subdomain: ${project_name}.tigawanna.vip"
 echo "Service: ${project_name}-pocketbase.service"
+
+
