@@ -1,6 +1,6 @@
 #!/bin/bash
-GO_VER=1.22.0
-NODE_VER=21
+GO_VER=1.22.1
+NODE_VER=21.7.1
 PG_VER=16
 # Update package list
 sudo apt-get update
@@ -67,7 +67,7 @@ sudo apt-get -y install podman docker
 echo "============== Podman + Docker has been installed successfully! =============="
 
 
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 # Activate NVM
 source ~/.nvm/nvm.sh
 # Install Node.js 20
