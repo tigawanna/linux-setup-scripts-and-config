@@ -1,5 +1,5 @@
 #!/bin/bash
-GO_VER=1.22.1
+GO_VER=1.25.0
 NODE_VER=21.7.1
 PG_VER=16
 # Update package list
